@@ -6,6 +6,7 @@
         "namespace": "default",
         "creationTimestamp": null,
         "labels": {
+            "app.kubernetes.io/instance": "84dcd3b7-5ce9-40bd-8bac-aef1d5ac6a95-default",
             "fluentd": "true"
         }
     },
@@ -43,7 +44,15 @@
                 },
                 "engineResources": {},
                 "svcOrchSpec": {},
-                "traffic": 50
+                "traffic": 50,
+                "explainer": {
+                    "type": "AnchorImages",
+                    "modelUri": "gs://tom-seldon-examples/workshops/manufacturing/pretrained/explainer",
+                    "containerSpec": {
+                        "name": "",
+                        "resources": {}
+                    }
+                }
             },
             {
                 "name": "canary",
