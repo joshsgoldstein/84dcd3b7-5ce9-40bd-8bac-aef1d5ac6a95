@@ -44,15 +44,7 @@
                 },
                 "engineResources": {},
                 "svcOrchSpec": {},
-                "traffic": 50,
-                "explainer": {
-                    "type": "AnchorImages",
-                    "modelUri": "gs://tom-seldon-examples/workshops/manufacturing/pretrained/explainer",
-                    "containerSpec": {
-                        "name": "",
-                        "resources": {}
-                    }
-                }
+                "traffic": 50
             },
             {
                 "name": "canary",
