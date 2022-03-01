@@ -1,13 +1,10 @@
 {
     "kind": "SeldonDeployment",
-    "apiVersion": "machinelearning.seldon.io/v1",
+    "apiVersion": "machinelearning.seldon.io/v1alpha2",
     "metadata": {
         "name": "josh-test",
         "namespace": "default",
-        "creationTimestamp": null,
-        "labels": {
-            "app.kubernetes.io/instance": "84dcd3b7-5ce9-40bd-8bac-aef1d5ac6a95-default"
-        }
+        "creationTimestamp": null
     },
     "spec": {
         "name": "josh-test",
@@ -25,7 +22,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-01T16:47:29Z"
+                            "creationTimestamp": "2022-03-01T17:35:23Z"
                         },
                         "spec": {
                             "containers": [
@@ -49,7 +46,24 @@
                 "replicas": 1,
                 "engineResources": {},
                 "svcOrchSpec": {},
-                "traffic": 70
+                "traffic": 70,
+                "explainer": {
+                    "type": "AnchorImages",
+                    "modelUri": "gs://tom-seldon-examples/workshops/manufacturing/pretrained/explainer",
+                    "containerSpec": {
+                        "name": "",
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "2Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            }
+                        }
+                    }
+                }
             },
             {
                 "name": "canary",
@@ -64,7 +78,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-01T16:47:29Z"
+                            "creationTimestamp": "2022-03-01T17:35:23Z"
                         },
                         "spec": {
                             "containers": [
