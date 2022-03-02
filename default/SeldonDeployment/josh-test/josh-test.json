@@ -22,7 +22,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-01T17:35:23Z"
+                            "creationTimestamp": "2022-03-02T16:46:22Z"
                         },
                         "spec": {
                             "containers": [
@@ -55,11 +55,11 @@
                         "resources": {
                             "limits": {
                                 "cpu": "2",
-                                "memory": "2Gi"
+                                "memory": "4Gi"
                             },
                             "requests": {
                                 "cpu": "1",
-                                "memory": "1Gi"
+                                "memory": "4Gi"
                             }
                         }
                     }
@@ -78,7 +78,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-01T17:35:23Z"
+                            "creationTimestamp": "2022-03-02T16:46:22Z"
                         },
                         "spec": {
                             "containers": [
