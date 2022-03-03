@@ -22,7 +22,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-02T16:51:40Z"
+                            "creationTimestamp": "2022-03-03T14:48:28Z"
                         },
                         "spec": {
                             "containers": [
@@ -30,12 +30,12 @@
                                     "name": "inception",
                                     "resources": {
                                         "limits": {
-                                            "cpu": "1",
-                                            "memory": "4Gi"
+                                            "cpu": "2",
+                                            "memory": "8Gi"
                                         },
                                         "requests": {
-                                            "cpu": "1",
-                                            "memory": "4Gi"
+                                            "cpu": "2",
+                                            "memory": "8Gi"
                                         }
                                     }
                                 }
@@ -78,7 +78,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-02T16:51:40Z"
+                            "creationTimestamp": "2022-03-03T14:48:28Z"
                         },
                         "spec": {
                             "containers": [
@@ -86,12 +86,12 @@
                                     "name": "simple-cnn",
                                     "resources": {
                                         "limits": {
-                                            "cpu": "1",
-                                            "memory": "4Gi"
+                                            "cpu": "2",
+                                            "memory": "8Gi"
                                         },
                                         "requests": {
-                                            "cpu": "1",
-                                            "memory": "4Gi"
+                                            "cpu": "2",
+                                            "memory": "8Gi"
                                         }
                                     }
                                 }
