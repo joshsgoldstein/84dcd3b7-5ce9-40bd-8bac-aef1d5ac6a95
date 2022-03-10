@@ -1,13 +1,10 @@
 {
     "kind": "SeldonDeployment",
-    "apiVersion": "machinelearning.seldon.io/v1",
+    "apiVersion": "machinelearning.seldon.io/v1alpha2",
     "metadata": {
         "name": "manufaturing-demo",
         "namespace": "default",
-        "creationTimestamp": null,
-        "labels": {
-            "app.kubernetes.io/instance": "84dcd3b7-5ce9-40bd-8bac-aef1d5ac6a95-default"
-        }
+        "creationTimestamp": null
     },
     "spec": {
         "name": "manufaturing-demo",
@@ -25,7 +22,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-10T13:46:58Z"
+                            "creationTimestamp": "2022-03-10T14:58:48Z"
                         },
                         "spec": {
                             "containers": [
@@ -49,7 +46,7 @@
                 "replicas": 1,
                 "engineResources": {},
                 "svcOrchSpec": {},
-                "traffic": 100,
+                "traffic": 70,
                 "explainer": {
                     "type": "AnchorImages",
                     "modelUri": "gs://tom-seldon-examples/workshops/manufacturing/pretrained/explainer",
@@ -65,8 +62,55 @@
                                 "memory": "4Gi"
                             }
                         }
+                    },
+                    "config": {
+                        "batch_size": "100",
+                        "coverage_samples": "3",
+                        "min_samples_start": "10"
                     }
                 }
+            },
+            {
+                "name": "canary",
+                "graph": {
+                    "name": "simple-cnn",
+                    "implementation": "TENSORFLOW_SERVER",
+                    "modelUri": "gs://tom-seldon-examples/workshops/manufacturing/josh/simple-cnn/",
+                    "logger": {
+                        "mode": "all"
+                    }
+                },
+                "componentSpecs": [
+                    {
+                        "metadata": {
+                            "creationTimestamp": "2022-03-10T14:58:48Z"
+                        },
+                        "spec": {
+                            "containers": [
+                                {
+                                    "name": "simple-cnn",
+                                    "resources": {
+                                        "limits": {
+                                            "cpu": "2",
+                                            "memory": "8Gi"
+                                        },
+                                        "requests": {
+                                            "cpu": "2",
+                                            "memory": "8Gi"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "replicas": 1,
+                "annotations": {
+                    "seldon.io/canary": "true"
+                },
+                "engineResources": {},
+                "svcOrchSpec": {},
+                "traffic": 30
             }
         ],
         "protocol": "seldon"
