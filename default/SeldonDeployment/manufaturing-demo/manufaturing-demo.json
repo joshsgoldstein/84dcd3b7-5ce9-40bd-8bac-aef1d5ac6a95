@@ -22,7 +22,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-10T14:58:48Z"
+                            "creationTimestamp": "2022-03-11T00:40:22Z"
                         },
                         "spec": {
                             "containers": [
@@ -64,9 +64,9 @@
                         }
                     },
                     "config": {
-                        "batch_size": "100",
-                        "coverage_samples": "3",
-                        "min_samples_start": "10"
+                        "batch_size": "5",
+                        "coverage_samples": "1",
+                        "min_samples_start": "5"
                     }
                 }
             },
@@ -83,7 +83,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-10T14:58:48Z"
+                            "creationTimestamp": "2022-03-11T00:40:22Z"
                         },
                         "spec": {
                             "containers": [
