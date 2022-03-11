@@ -22,7 +22,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-11T00:54:05Z"
+                            "creationTimestamp": "2022-03-11T00:54:21Z"
                         },
                         "spec": {
                             "containers": [
@@ -64,7 +64,7 @@
                         }
                     },
                     "config": {
-                        "batch_size": "5",
+                        "batch_size": "10",
                         "coverage_samples": "1",
                         "min_samples_start": "5",
                         "start_label": "1"
@@ -84,7 +84,7 @@
                 "componentSpecs": [
                     {
                         "metadata": {
-                            "creationTimestamp": "2022-03-11T00:54:05Z"
+                            "creationTimestamp": "2022-03-11T00:54:21Z"
                         },
                         "spec": {
                             "containers": [
